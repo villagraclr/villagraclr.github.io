@@ -6,3 +6,25 @@ body {
     /* esta es la propiedad que añadimos
    */
 }
+.raleway-regular {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.raleway-bold {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+main{
+    background-color: black;
+}
+footer{
+
+}
+footer i{
+    font-size: 1.4rem;
+}
