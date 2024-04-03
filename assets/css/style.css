@@ -19,6 +19,9 @@ body {
     font-weight: 700;
     font-style: normal;
 }
+.titulo{
+    text-transform: uppercase;
+}
 main{
     background-color: black;
 }
