@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Raleway', 'Open Sans', sans-serif;
+    /* esta es la propiedad que añadimos
+   */
+}
+.raleway-regular {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.raleway-bold {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.titulo{
+    text-transform: uppercase;
+}
+main{
+    background-color: black;
+}
+footer{
+
+}
+footer i{
+    font-size: 1.4rem;
+}
+/*
+Alto mínimo del card-img-top según resolución
+*/
+@media (min-width: 1200px) {
+    #destacado .card .card-img-top {
+        max-height: 172px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #destacado .card .card-img-top {
+        max-height: 142px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #destacado .card .card-img-top {
+        max-height: 164px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #destacado{
+        padding: 1px;
+    }
+    #destacado .card .card-img-top {
+        max-height: 160px;
+    }
+}
