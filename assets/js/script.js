@@ -23,4 +23,15 @@ $(document).ready(function() {
         });
       }
     });
+    /*
+    mostrar alerta y ocultarlo después de 4 segundos
+    */
+    $("#enviarCorreo").on("click", function () {
+      $("#alert").addClass("d-block");
+      $("#alert").removeClass("d-none");
+      setTimeout(function () {
+        $("#alert").addClass("d-none");
+        $("#alert").removeClass("d-block");
+      }, 4000);
+    });
   });

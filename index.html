@@ -198,11 +198,18 @@
                                 <textarea class="form-control raleway-regular" id="mensaje" name="mensaje" rows="3" placeholder="Escriba aquí su mensaje"></textarea>
                             </div>
                             <div class="text-end">
-                                <button class="btn btn-info btn-lg" type="button" id="enviar"><span class="raleway-regular text-white">Enviar</span></button>    
+                                <button id="enviarCorreo" class="btn btn-info btn-lg" type="button" id="enviar" title="Enviar por correo"><span class="raleway-regular text-white">Enviar</span></button>    
                             </div>
                         </div>
                     </div>
                 </div>
+                <di class="row py-2">
+                    <div class="col-sm-12">
+                        <div class="alert alert-success d-none" role="alert" id="alert">
+                            <p class="cabin-regular">El correo fue enviado correctamente...</p>
+                          </div>
+                    </div>
+                </di>
             </div>
         </section>
     </main>
