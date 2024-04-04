@@ -4,9 +4,11 @@ body {
     padding: 0;
     font-family: 'Raleway', 'Open Sans', sans-serif;
 }
-img#logo{
+
+img#logo {
     width: 2rem;
 }
+
 /*Se agrega tipo letra regular*/
 .raleway-regular {
     font-family: "Raleway", sans-serif;
@@ -14,6 +16,7 @@ img#logo{
     font-weight: 400;
     font-style: normal;
 }
+
 /*Se agrega tipo letra bold*/
 .raleway-bold {
     font-family: "Raleway", sans-serif;
@@ -21,26 +24,42 @@ img#logo{
     font-weight: 700;
     font-style: normal;
 }
+
 /*Transforma todos los títulos a mayúsculas*/
-.titulo{
+.titulo {
     text-transform: uppercase;
 }
+
 /*Aplica fondo negro al main, donde se encuentran las secciones*/
-main{
+main {
     background-color: black;
 }
-.bg-black{
+
+.bg-black {
     background-color: black;
 }
-.bg-semi-transparente{
+
+.bg-semi-transparente {
     background-color: black;
     opacity: 0.8;
 }
-footer i{
+
+footer i {
     font-size: 2.3rem;
 }
+
 #quienes-somos .card {
     border: none;
+}
+
+/* Color de fondo oscuro para pantallas pequeñas */
+.bg-dark-mobile {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Color de fondo claro con opacidad */
+.bg-light-scroll {
+    background-color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /*
@@ -74,9 +93,10 @@ Alto mínimo del card-img-top según resolución
 Alto mínimo del card-img-top según resolución
 */
 @media (max-width: 767.98px) {
-    #destacado{
+    #destacado {
         padding: 1px;
     }
+
     #destacado .card .card-img-top {
         max-height: 160px;
     }
