@@ -1,31 +1,34 @@
 $(document).ready(function () {
   const $nav = $('nav');
-  const $navbarNavAltMarkup = $('#navbarNav');
-  const headerHeight = $('header').outerHeight();
+  var $carousel = $('#carouselExample');
   //cambiar a fondo negro cuando esté fuera del header
   $(window).scroll(function () {
-    if ($(window).scrollTop() > headerHeight) {
+    if ($(this).scrollTop() > $carousel.height()) {
       $nav.addClass('bg-black');
     } else {
       $nav.removeClass('bg-black');
     }
   });
-  //agregar clase para cambiar de fondo cuando esté collapsado el menu
-  $('.navbar-collapse').on('bs.collapse.hide', function () {
-    $navbarNavAltMarkup.addClass('bg-semi-transparente');
-  });
-  //Quitar clase para cambiar de fondo cuando no esté collapsado el menu
-  $('.navbar-collapse').on('bs.collapse.show', function () {
-    $navbarNavAltMarkup.removeClass('bg-semi-transparente');
-  });
-  $('[data-toggle="tooltip"]').tooltip();
-  $('.navbar-nav > .link').hover(function() {
-    if (!$('.navbar-collapse').hasClass('show')) {
-      $(this).tooltip('show');
+  //Resuelve el tema del color de fondo del menu, cuando es pantalla pequeña 
+  function toggleNavbarBackground() {
+    var $navbar = $('.navbar');
+    if ($(window).width() < 768 && $(window).scrollTop() > $carousel.height()) {
+      $navbar.addClass('bg-dark-mobile');
+    } else {
+      $navbar.removeClass('bg-dark-mobile');
     }
-  }, function() {
-    $(this).tooltip('hide');
-  });
+    //Modifica la posición del tooltip dependiendo de la pantalla
+    if($(window).width() < 768){
+      $('[data-bs-toggle="tooltip"]').attr('data-bs-placement', 'right').tooltip();
+    }else{
+      $('[data-bs-toggle="tooltip"]').attr('data-bs-placement', 'bottom').tooltip();
+    }
+  }
+
+  // Ejecutar al cargar la página y al cambiar el tamaño de la ventana
+  toggleNavbarBackground();
+  $(window).resize(toggleNavbarBackground);
+  
   //Aplicar Smooth scroll al pinchar en los links
   $("a.link").on('click', function (event) {
     if (this.hash !== "") {
