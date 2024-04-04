@@ -3,34 +3,46 @@ body {
     border: 0;
     padding: 0;
     font-family: 'Raleway', 'Open Sans', sans-serif;
-    /* esta es la propiedad que añadimos
-   */
 }
+img#logo{
+    width: 2rem;
+}
+/*Se agrega tipo letra regular*/
 .raleway-regular {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-
+/*Se agrega tipo letra bold*/
 .raleway-bold {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
+/*Transforma todos los títulos a mayúsculas*/
 .titulo{
     text-transform: uppercase;
 }
+/*Aplica fondo negro al main, donde se encuentran las secciones*/
 main{
     background-color: black;
 }
-footer{
-
+.bg-black{
+    background-color: black;
+}
+.bg-semi-transparente{
+    background-color: black;
+    opacity: 0.8;
 }
 footer i{
-    font-size: 1.4rem;
+    font-size: 2.3rem;
 }
+#quienes-somos .card {
+    border: none;
+}
+
 /*
 Alto mínimo del card-img-top según resolución
 */
@@ -40,18 +52,27 @@ Alto mínimo del card-img-top según resolución
     }
 }
 
+/*
+Alto mínimo del card-img-top según resolución
+*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #destacado .card .card-img-top {
         max-height: 142px;
     }
 }
 
+/*
+Alto mínimo del card-img-top según resolución
+*/
 @media (min-width: 768px) and (max-width: 991.98px) {
     #destacado .card .card-img-top {
         max-height: 164px;
     }
 }
 
+/*
+Alto mínimo del card-img-top según resolución
+*/
 @media (max-width: 767.98px) {
     #destacado{
         padding: 1px;
